@@ -1,0 +1,63 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Form</title>
+        <style>
+            #background{
+                background-color: darkgoldenrod;
+            }
+            #title{
+                color: black;
+                text-align: center;
+            }
+            #description{
+                color: black;
+                text-align: center;
+            }
+            #survey-form{}
+            #name{}
+        </style>    
+    </head>
+    <body>
+        <div id="background">
+            <h1 id="title">Survey Form</h1>
+            <h3 id="description">Let us know something about your programming skills</h3>
+            <form id="survey-form">
+                * Name:<br>
+                <input type="text" name="Name" placeholder="Enter your name" required><br>
+                * E-mail:<br>
+                <input type="email" name="Email" placeholder="Enter your email" required><br>
+                * Age:<br>
+                <input type="number"  name="age" placeholder="Enter your age" min="10" max="100" required><br>
+                Which option best describes your current role:<br>
+                <select name="dropdown">
+                    <option value="Learner/Beginner" selected>Learner/Beginner</option>
+                    <option value="Junior Programmer">Junior Programmer</option>
+                    <option value="Intermediate Programmer">Intermediate Programmer</option>
+                    <option value="Senior Programmer">Senior Programmer</option>
+                </select>
+                How likely is that you would recommend programming to a friend:<br>
+                <input type="radio" name="recommend programming to a friend" value="Definitely">Definitely<br>
+                <input type="radio" name="recommend programming to a friend" value="Maybe">Maybe<br>
+                <input type="radio" name="recommend programming to a friend" value="Not sure">Not sure<br>
+                Programming technologies you use:<br>
+                <input type="checkbox" name="Programming technologies" value="HTML">HTML<br>
+                <input type="checkbox" name="Programming technologies" value="CSS">CSS<br>
+                <input type="checkbox" name="Programming technologies" value="JavaScript">JavaScript<br>
+                <input type="checkbox" name="Programming technologies" value="C#">C#<br>
+                <input type="checkbox" name="Programming technologies" value="SQL">SQL<br>
+                <input type="checkbox" name="Programming technologies" value="Python">Python<br>
+                <input type="checkbox" name="Programming technologies" value="C++">C++<br>
+                <input type="checkbox" name="Programming technologies" value="Swift">Swift<br>
+                <input type="checkbox" name="Programming technologies" value="Java">Java<br>
+                <input type="checkbox" name="Programming technologies" value="PHP">PHP<br>
+                <input type="checkbox" name="Programming technologies" value="Ruby">Ruby<br>
+                <input type="checkbox" name="Programming technologies" value="C">C<br>
+                Any Comments or Suggestions?<br>
+                <textarea name="Comments or Suggestions" rows="10" cols="30"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
