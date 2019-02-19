@@ -5,58 +5,108 @@
         <title>Survey Form</title>
         <style>
             #background{
-                background-color: darkgoldenrod;
+                background-color: grey;
+                padding-bottom: 10px;
             }
             #title{
                 color: black;
+                font-size: 250%;
+                padding-top: 20px;
                 text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             }
             #description{
                 color: black;
                 text-align: center;
+                font-size: 120%;
             }
-            #survey-form{}
-            #name{}
+            #survey-form{
+                background-color: white;
+                font-family: 'Times New Roman', Times, serif;
+                padding: 20px;
+                padding-top: 20px;
+                border-radius: 10px;
+                margin: 0 auto;
+                width: 65%;
+                max-width: 600px;
+            }
+            #bold, #name-label, #email-label, #number-label, #dropdown-label{
+                font-weight: bold;
+            }
+            #name, #email, #number, #comment{
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                width: 100%;
+                padding: 10px;
+                text-align: left;
+                vertical-align: middle;
+                margin-top: 10px;
+            }
+            #first-element, #dropdown{
+                margin-top: 10px;
+            }
+            #last-element{
+                margin-bottom: 10px;
+            }
+            #submit{
+                background-color: #4CAF50;
+                border-radius: 5px;
+                border: none;
+                color: white;
+                padding: 8px 16px;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+                margin-left: 50%;
+            }
         </style>    
     </head>
     <body>
         <div id="background">
             <h1 id="title">Survey Form</h1>
-            <h3 id="description">Let us know something about your programming skills</h3>
             <form id="survey-form">
-                * Name:<br>
-                <input type="text" name="Name" placeholder="Enter your name" required><br>
-                * E-mail:<br>
-                <input type="email" name="Email" placeholder="Enter your email" required><br>
-                * Age:<br>
-                <input type="number"  name="age" placeholder="Enter your age" min="10" max="100" required><br>
-                Which option best describes your current role:<br>
-                <select name="dropdown">
-                    <option value="Learner/Beginner" selected>Learner/Beginner</option>
-                    <option value="Junior Programmer">Junior Programmer</option>
-                    <option value="Intermediate Programmer">Intermediate Programmer</option>
-                    <option value="Senior Programmer">Senior Programmer</option>
-                </select>
-                How likely is that you would recommend programming to a friend:<br>
-                <input type="radio" name="recommend programming to a friend" value="Definitely">Definitely<br>
-                <input type="radio" name="recommend programming to a friend" value="Maybe">Maybe<br>
-                <input type="radio" name="recommend programming to a friend" value="Not sure">Not sure<br>
-                Programming technologies you use:<br>
-                <input type="checkbox" name="Programming technologies" value="HTML">HTML<br>
-                <input type="checkbox" name="Programming technologies" value="CSS">CSS<br>
-                <input type="checkbox" name="Programming technologies" value="JavaScript">JavaScript<br>
-                <input type="checkbox" name="Programming technologies" value="C#">C#<br>
-                <input type="checkbox" name="Programming technologies" value="SQL">SQL<br>
-                <input type="checkbox" name="Programming technologies" value="Python">Python<br>
-                <input type="checkbox" name="Programming technologies" value="C++">C++<br>
-                <input type="checkbox" name="Programming technologies" value="Swift">Swift<br>
-                <input type="checkbox" name="Programming technologies" value="Java">Java<br>
-                <input type="checkbox" name="Programming technologies" value="PHP">PHP<br>
-                <input type="checkbox" name="Programming technologies" value="Ruby">Ruby<br>
-                <input type="checkbox" name="Programming technologies" value="C">C<br>
-                Any Comments or Suggestions?<br>
-                <textarea name="Comments or Suggestions" rows="10" cols="30"></textarea><br>
-                <button type="submit">Submit</button>
+                <p id="description">Let us know something about your programming skills</p>
+                <!-- name --><br>
+                <label for="name" id="name-label">* Name:</label><br>
+                <input type="text" id="name" name="Name" placeholder="Enter your name" required><br>
+                <!-- email --><br>
+                <label for="email" id="email-label">* E-mail:</label><br>
+                <input type="email" id="email" name="Email" placeholder="Enter your email" required><br>
+                <!-- age --><br>
+                <label for="number" id="number-label">* Age:</label><br>
+                <input type="number" id="number" name="age" placeholder="Enter your age" min="5" max="110" required><br>
+                <!-- dropdown role --><br>
+                <label for="dropdown" id="dropdown-label">Which option best describes your current role:</label><br>
+                <select name="dropdown" id="dropdown">
+                    <option value="Learner/Beginner" selected> Learner/Beginner</option>
+                    <option value="Junior Programmer"> Junior Programmer</option>
+                    <option value="Intermediate Programmer"> Intermediate Programmer</option>
+                    <option value="Senior Programmer"> Senior Programmer</option>
+                </select><br><br>
+                <!-- radio for recommendation -->
+                <label for="recommendation" id="bold">How likely is that you would recommend programming to a friend:</label><br>
+                <input type="radio" id="first-element" name="recommend programming to a friend" value="Definitely"> Definitely<br>
+                <input type="radio" name="recommend programming to a friend" value="Maybe"> Maybe<br>
+                <input type="radio" name="recommend programming to a friend" value="Not sure"> Not sure<br><br>
+                <!-- checkbox for tech -->
+                <label for="programming tech" id="bold">Programming technologies you use:</label><br>
+                <input type="checkbox" id="first-element" name="Programming technologies" value="HTML"> HTML<br>
+                <input type="checkbox" name="Programming technologies" value="CSS"> CSS<br>
+                <input type="checkbox" name="Programming technologies" value="JavaScript"> JavaScript<br>
+                <input type="checkbox" name="Programming technologies" value="C#"> C#<br>
+                <input type="checkbox" name="Programming technologies" value="SQL"> SQL<br>
+                <input type="checkbox" name="Programming technologies" value="Python"> Python<br>
+                <input type="checkbox" name="Programming technologies" value="C++"> C++<br>
+                <input type="checkbox" name="Programming technologies" value="Swift"> Swift<br>
+                <input type="checkbox" name="Programming technologies" value="Java"> Java<br>
+                <input type="checkbox" name="Programming technologies" value="PHP"> PHP<br>
+                <input type="checkbox" name="Programming technologies" value="Ruby"> Ruby<br>
+                <input type="checkbox" id="last-element" name="Programming technologies" value="C"> C<br>
+                <!-- textarea for comments -->
+                <label for="comments" id="bold">Comments or Suggestions?</label><br>
+                <textarea id="comment" name="Comments or Suggestions" rows="5" placeholder="Write Something.."></textarea><br>
+                <!-- submit --><br>
+                <button type="submit" id="submit" value="submit">Submit</button>
             </form>
         </div>
     </body>
